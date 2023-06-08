@@ -20,7 +20,7 @@ namespace fukuv0608
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // ‰‰K12-1-----
+            // ‰‰K12-2-----
 
             label1.Top = rand.Next(0, ClientSize.Height - 15 - 1);
             label2.Left = rand.Next(0, ClientSize.Width - 38 - 1);
