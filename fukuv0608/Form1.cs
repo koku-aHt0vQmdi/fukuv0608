@@ -4,6 +4,7 @@ namespace fukuv0608
     {
         int vx = -5;
         int vy = -5;
+        int labelnamber = 1;
 
         public Form1()
         {
@@ -20,10 +21,17 @@ namespace fukuv0608
             label1.Left += vx;
             label1.Top += vy;
 
+            label1.Text = "label" + labelnamber.ToString();
+            labelnamber++;
+
             if (label1.Top <= 0 || ClientSize.Height <= label1.Bottom)
-                vy *= -1;
+                vy *= -2;
             if (label1.Left <= 0 || ClientSize.Width <= label1.Right)
-                vx *= -1;
+                vx *= -2;
+            if (50 < vx)
+                vx = 50;
+            if (50 < vy)
+                vy = 50;
         }
 
         private void label1_Click(object sender, EventArgs e)
