@@ -6,7 +6,10 @@ namespace fukuv0608
     {
         int vx = -5;
         int vy = -5;
+        
         int labelnamber = 1;
+
+        int itime = 0;
 
         public Form1()
         {
@@ -15,7 +18,7 @@ namespace fukuv0608
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -56,6 +59,13 @@ namespace fukuv0608
 
             if (label1.Left <= fpos.X && fpos.X <= label1.Right && label1.Top <= fpos.Y && fpos.Y <= label1.Bottom)
                 timer1.Enabled = false;
+
+            // ‰‰K11-2-----
+
+            label3.Top = 10;
+            label3.Left = ClientSize.Width - 10 - 38;
+            itime++;
+            label3.Text = itime.ToString();
 
             // -----
         }
