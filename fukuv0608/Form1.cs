@@ -15,7 +15,7 @@ namespace fukuv0608
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -53,6 +53,9 @@ namespace fukuv0608
             // マウスカーソルがLabel2の中央を指すようにする
             label2.Left = fpos.X - label2.Width / 2;
             label2.Top = fpos.Y - label2.Height / 2;
+
+            if (label1.Left <= fpos.X && fpos.X <= label1.Right && label1.Top <= fpos.Y && fpos.Y <= label1.Bottom)
+                timer1.Enabled = false;
 
             // -----
         }
